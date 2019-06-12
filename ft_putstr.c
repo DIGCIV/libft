@@ -6,7 +6,7 @@
 /*   By: ucrooks <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/05 23:01:07 by ucrooks           #+#    #+#             */
-/*   Updated: 2019/05/05 23:04:56 by ucrooks          ###   ########.fr       */
+/*   Updated: 2019/06/11 21:56:58 by ucrooks          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,8 @@
 
 void	ft_putstr(char const *s)
 {
-	size_t		i;
-
 	if (s != NULL)
 	{
-		i = 0;
-		while (s[i] != '\0')
-		{
-			ft_putchar(s[i]);
-			i++;
-		}
+		write(1, s, ft_strlen(s));
 	}
 }
